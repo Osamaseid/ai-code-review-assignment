@@ -1,14 +1,19 @@
-# Notes (Optional)
+# Notes
 
-This file is optional.
+## Assumptions
 
-Use it only if you want to provide **additional context** for the reviewer that does not fit cleanly in `submission_template.md`.
+- Input data may be imperfect and come from external sources.
+- Functions should fail safely instead of raising errors.
+- Returning `0.0` for empty or invalid input is acceptable for these tasks.
 
-Examples of appropriate use:
-- Assumptions you made
-- Known limitations of your solution
-- Alternative approaches you considered but did not implement
+## Known Limitations
 
-Do not repeat information already included in `submission_template.md`.
+- Email validation is intentionally basic and does not follow full email standards.
+- Order and measurement validation focuses on safety, not strict data enforcement.
+- These functions prioritize correctness and clarity over performance optimizations.
 
-Remove the contents of this file and write your notes.
+## Alternative Approaches Considered
+
+- Using regular expressions for email validation, but avoided to keep logic simple.
+- Raising exceptions instead of returning `0.0`, but chose safer defaults for general use.
+- Using list comprehensions, but kept loops for readability and clearer error handling.
